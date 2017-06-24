@@ -29,7 +29,7 @@ post '/company' do
   data = JSON.parse body
 
   missing = []
-  required = ['cvr', 'address', 'city', 'country', 'phone_number']
+  required = ['cvr', 'name', 'address', 'city', 'country']
   for r in required
     if not data.has_key?(r)
       missing.push r
